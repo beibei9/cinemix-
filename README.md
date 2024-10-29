@@ -10,8 +10,8 @@ Currently in active development, with plans to add user authentication and revie
 ## Installation and Usage
 To run this project locally, follow these steps:
 ```bash
-git clone https://github.com/yourusername/cinemix.git
-cd cinemix
+git clone https://github.com/yourusername/cinemix-.git
+cd cinemix-
 npm install
 npm start
 ```

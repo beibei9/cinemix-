@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cinemix Movie Platform </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+        <a class="navbar-brand ms-3" href="#">Cinemix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto" id="navbarItems">
+                <li class="nav-item">
+                    <a class="nav-link" href="#romcoms-section" tabindex="0">Rom-coms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fantasy-section" tabindex="0">Fantasy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#thrillers-section" tabindex="0">Thrillers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#premiere-section" tabindex="0">Premieres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#subscribe-section" tabindex="0">Subscribe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html" tabindex="0">Catalog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faqs.html" tabindex="0">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" tabindex="0">Login</a>
+                </li>
+            </ul>
+            <button id="toggle">Dark Mode</button>
+            <script src="dark-mode.js"></script>
+        </div>
+    </nav>
+
+    <script src = "keyboard.js"></script> 
+
+    <header class="mb-3">
+        <h1 class="header-section text-center">Cinemix</h1>
+    </header>
+    <hr class="mb-4">
+    
+    <div class="greeting-container">
+        <h1 id="greeting">Hello, Guest!</h1>
+        <input type="text" id="name-input" placeholder="Enter your name">
+        <button id="submit-button">Submit</button>
+    </div>
+
+    <script src="greeting.js"></script>
+
+    <p class="highlighted-text text-center px-sm-2">
+        Welcome to Cinemix — where every movie night becomes a new adventure! Dive into a world of captivating stories, unforgettable characters, and cinematic magic from the comfort of your home.
+    </p>
+    <p class="highlighted-text text-center px-sm-2">
+        With our diverse selection, there's something for every mood and every taste. Grab your popcorn, get cozy, and let the show begin. Enjoy the journey! 🎬🍿
+    </p>
+    <br>
+
+    <div class="filter-container">
+        <label for="filter-rating">Filter by Rating:</label>
+        <select id="filter-rating">
+            <option value="">All Ratings</option>
+            <option value="8">8 and above</option>
+            <option value="7">7 and above</option>
+            <option value="6">6 and above</option>
+        </select>
+    
+        <label for="filter-year">Filter by Year:</label>
+        <select id="filter-year">
+            <option value="">All Years</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+        </select>
+    
+        <button id="apply-filters" class="btn btn-primary">Apply Filters</button>
+    </div>
+    
+    <div id="movie-list">
+    </div>
+    <script src="filter.js"></script>
+    
+    <section id="romcoms-section" class="movie-section mb-5">
+        <h2>Rom-coms</h2>
+        <hr>
+        <div id="romcomCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://i.ebayimg.com/thumbs/images/g/t7cAAOxyJmhSFpnW/s-l1600.jpg" class="card-img-top" alt="How to Lose a Guy in 10 Days">
+                                <div class="card-body">
+                                    <h5 class="card-title">How to Lose a Guy in 10 Days</h5>
+                                    <p class="card-text">A writer and a public relations executive make a bet that he can't make her fall in love with him in 10 days.</p>
+                                    <a href="romcom_movie1.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://xl.movieposterdb.com/09_10/1999/147800/xl_147800_ee277e47.jpg" class="card-img-top" alt="10 Things I Hate About You">
+                                <div class="card-body">
+                                    <h5 class="card-title">10 Things I Hate About You</h5>
+                                    <p class="card-text">A new student must find a way to get a rebellious girl to date him in order to get his crush to date him.</p>
+                                    <a href="romcom_movie2.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNzhlZjE4NTYtZDBlOC00NTAwLWFmMTQtMWVjNDQwZGI1MjViXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="My Best Friend’s Wedding">
+                                <div class="card-body">
+                                    <h5 class="card-title">My Best Friend’s Wedding</h5>
+                                    <p class="card-text">Julianne realizes she loves her best friend just before his wedding and must convince him to reconsider before it’s too late.</p>
+                                    <a href="romcom_movie3.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/5/5d/Always_Be_My_Maybe_poster.png" class="card-img-top" alt="Always Be My Maybe">
+                                <div class="card-body">
+                                    <h5 class="card-title">Always Be My Maybe</h5>
+                                    <p class="card-text">Childhood friends Sasha and Marcus reconnect after 15 years, navigating their feelings for each other while dealing with their different lifestyles and romantic entanglements.</p>
+                                    <a href="romcom_movie4.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/344/2024/08/22181008/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg" class="card-img-top" alt="13 Going on 30">
+                                <div class="card-body">
+                                    <h5 class="card-title">13 Going on 30</h5>
+                                    <p class="card-text">After making a wish on her 13th birthday, Jenna wakes up as a 30-year-old woman and must navigate adulthood while rediscovering her childhood dreams and the true meaning of love.</p>
+                                    <a href="romcom_movie5.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMjQ3NjM5MTAzN15BMl5BanBnXkFtZTgwODQzMDAwNjM@._V1_.jpg" class="card-img-top" alt="To All the Boys I've Loved Before">
+                                <div class="card-body">
+                                    <h5 class="card-title">To All the Boys I've Loved Before</h5>
+                                    <p class="card-text">After her secret love letters are mailed to her crushes, Lara Jean must navigate the challenges of unexpected romance and the chaos that ensues.</p>
+                                    <a href="romcom_movie6.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#romcomCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#romcomCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+    <section id="fantasy-section" class="movie-section mb-5">
+        <h2>Fantasy</h2>
+        <hr>
+        <div id="fantasyCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="The Lord of the Rings">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Lord of the Rings</h5>
+                                    <p class="card-text">A hobbit and his friends embark on a quest to destroy a powerful ring that could enslave the world.</p>
+                                    <a href="fantasy_movie1.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://image.tmdb.org/t/p/original/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg" class="card-img-top" alt="Harry Potter">
+                                <div class="card-body">
+                                    <h5 class="card-title">Harry Potter</h5>
+                                    <p class="card-text">A young boy discovers he is a wizard and attends a magical school where he faces various adventures.</p>
+                                    <a href="fantasy_movie2.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://avatars.mds.yandex.net/i?id=f1fdb5f8d06b0c9489ac1bbee0954d4c_l-9461935-images-thumbs&n=13" class="card-img-top" alt="The Chronicles of Narnia">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Chronicles of Narnia</h5>
+                                    <p class="card-text">Four siblings discover a magical land through a wardrobe and join the battle against an evil queen.</p>
+                                    <a href="fantasy_movie3.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://i.pinimg.com/736x/c9/2a/1e/c92a1ee657bd73c98984053d9e2b4fa7.jpg" class="card-img-top" alt="Avatar: The Last Airbender">
+                                <div class="card-body">
+                                    <h5 class="card-title">Avatar</h5>
+                                    <p class="card-text">A paraplegic former Marine, Jake Sully, joins the Avatar Program to interact with the native Na'vi on the lush alien planet Pandora, where he must navigate between his mission and the new world he comes to love.</p>
+                                    <a href="fantasy_movie4.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/b9a4300e-6120-4873-8509-895eefd00f4a/1920x" class="card-img-top" alt="Pan's Labyrinth">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pan's Labyrinth</h5>
+                                    <p class="card-text">In post-Civil War Spain, a young girl discovers a mysterious labyrinth and a faun who sets her on a quest.</p>
+                                    <a href="fantasy_movie5.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://cdnn21.img.ria.ru/images/25540/93/255409360_0:0:0:0_600x0_80_0_0_506a304b6290c093e9fd2d074e24ea89.jpg" class="card-img-top" alt="The Sorcerer's Apprentice">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Sorcerer's Apprentice</h5>
+                                    <p class="card-text">A young man is recruited by a sorcerer to help him defeat a powerful wizard who seeks to dominate the world.</p>
+                                    <a href="fantasy_movie6.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#fantasyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#fantasyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+    <section id="thrillers-section" class="movie-section mb-5">
+        <h2>Thrillers</h2>
+        <hr>
+        <div id="thrillerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://m.media-amazon.com/images/M/MV5BN2U5ZDE4OTgtYzY4ZC00MWFhLTg2ZjUtNDQ2ZGE0MDUyNmVkXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Se7en">
+                                <div class="card-body">
+                                    <h5 class="card-title">Se7en</h5>
+                                    <p class="card-text">Two detectives hunt a serial killer who uses the seven deadly sins as his modus operandi.</p>
+                                    <a href="thriller_movie1.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" class="card-img-top" alt="The Silence of the Lambs">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Silence of the Lambs</h5>
+                                    <p class="card-text">An FBI trainee seeks the help of a cunning serial killer to catch another serial killer.</p>
+                                    <a href="thriller_movie2.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://i.pinimg.com/736x/91/78/b8/9178b899d3d1d2e33b74a3a3013ad14c.jpg" class="card-img-top" alt="Gone Girl">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gone Girl</h5>
+                                    <p class="card-text">A man becomes the prime suspect in the disappearance of his wife, leading to a media frenzy and shocking revelations.</p>
+                                    <a href="thriller_movie3.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://i.pinimg.com/474x/22/57/3f/22573f79568bd15b7fb55f01829c6ab2.jpg?nii=t" class="card-img-top" alt="Prisoners">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prisoners</h5>
+                                    <p class="card-text">When his daughter and her friend go missing, a father takes matters into his own hands while the police follow leads.</p>
+                                    <a href="thriller_movie4.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://i.pinimg.com/736x/47/86/9a/47869a2b1cf8124883579ba5b672568e.jpg" class="card-img-top" alt="Shutter Island">
+                                <div class="card-body">
+                                    <h5 class="card-title">Shutter Island</h5>
+                                    <p class="card-text">A U.S. Marshal investigates the disappearance of a prisoner from a mental institution on Shutter Island.</p>
+                                    <a href="thriller_movie5.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div class="card">
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTg2NzExNjgxMV5BMl5BanBnXkFtZTcwNjYzNjU4MQ@@._V1_FMjpg_UX1000_.jpg" class="card-img-top" alt="Zodiac">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zodiac</h5>
+                                    <p class="card-text">A cartoonist becomes an amateur detective obsessed with the Zodiac killer, who taunts police with cryptic messages.</p>
+                                    <a href="thriller_movie6.html" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#thrillerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#thrillerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+    <hr>
+
+    <section id="premiere-section" class="container mt-5 text-center">
+        <h2 class="mb-4 text-center">The most anticipated Movie Premieres</h2>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-5 movie-block">
+                <img src="https://m.media-amazon.com/images/M/MV5BZDMyYWU4NzItZDY0MC00ODE2LTkyYTMtMzNkNDdmYmFhZDg0XkEyXkFqcGc@._V1_.jpg" alt="Venom Poster" class="img-fluid mb-3 movie-poster">
+                <h4 class="movie-title">Venom: The Last Dance Movie</h4>
+                <p id="premiere-date-1" class="mb-2 premiere-date"></p>
+                <p id="time-left-1" class="time-left"></p>
+            </div>
+    
+            <div class="col-md-5 movie-block">
+                <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10809116/079db1af-cf0e-4b74-a6da-19f01d772544/600x900" alt="Moana 2 Poster" class="img-fluid mb-3 movie-poster">
+                <h4 class="movie-title">Moana 2</h4>
+                <p id="premiere-date-2" class="mb-2 premiere-date"></p>
+                <p id="time-left-2" class="time-left"></p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="genrehdg-animation.js"></script>
+
+    <script src="countdown.js"></script>
+
+    <section id="subscribe-section" class="mb-5">
+        <h4 class="mb-3 text-center">Keep up with the updates!</h4>
+        <form id="subscription-form" action="#" method="post" class="mx-auto px-sm-2" onsubmit="return validateForm()">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" class="form-control mb-3">
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control mb-3">
+
+            <label for="genre" class="form-label">Favorite Genre:</label>
+            <select id="genre" name="genre" class="form-select mb-3">
+                <option value="" disabled selected>Select your favorite genre</option>
+                <option value="romcom">Rom-com</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="thriller">Thriller</option>
+                <option value="action">Action</option>
+                <option value="drama">Drama</option>
+            </select>
+
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" class="form-control mb-3" minlength="6">
+
+            <label for="confirm-password" class="form-label">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" class="form-control mb-3" minlength="6">
+
+            <label for="comments" class="form-label">Any Comments:</label>
+            <textarea id="comments" name="comments" rows="4" class="form-control mb-3" placeholder="Share your thoughts"></textarea>
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+            <button type="button" id="reset-btn" class="btn btn-secondary">Reset</button>
+        </form>
+        <div id="error-messages" class="text-danger"></div>
+    </section>
+
+    <script src="form-validation.js"></script>
+    <script src="form-reset.js"></script> 
+    
+    <div id="form-container">
+        <img src="https://www.svgrepo.com/download/416931/contact-dm-email.svg" alt="Popup Image" class="popup-image">
+    </div>
+    
+    <div id="contactPopup" class="form-overlay">
+        <div class="popup-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2 class="header-section">Contact Us</h2>
+            <form id="contact-form" action="#">
+                <div id="error-messages-popup" class="text-danger"></div>
+    
+                <!-- Step 1: Name -->
+                <div class="form-step active">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <!-- Step 2: Message -->
+                <div class="form-step">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+    
+                <button type="button" id="nextBtn" class="btn-primary">Next</button>
+                <button type="button" id="backBtn" class="btn-primary" style="display: none;">Back</button>
+                <button id="sendBtn" class="btn-primary" type="submit" style="display: none;">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+    <audio id="click-sound" src="notification.mp3" preload="auto"></audio>
+    
+    <script src="contact-us.js"></script>    
+  
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Nygymetolla Aibibi | Kapal Moldir | Zholdybayeva Ayala</p>
+        <p>&copy; 2024 Cinemix. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

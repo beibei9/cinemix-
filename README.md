@@ -5,7 +5,7 @@ Cinemix: A Movie Catalog Web Application
 Cinemix is a web application that allows users to explore various movie genres, including romantic comedies, fantasy, and thrillers. Users can navigate through different sections, view upcoming premieres, and access a catalog of films. The application features a user-friendly interface with a contact form for inquiries.
 
 ## Project Status
-Currently in active development, with plans to add user authentication and review features in future updates.
+Currently in active development.
 
 ## Installation and Usage
 To run this project locally, follow these steps:
@@ -30,6 +30,12 @@ Visit `http://localhost:3000` to access the application.
 - CSS
 - JavaScript
 - Bootstrap (for responsive design)
+
+## Updates
+- We added omdb api for searching movies
+- Updated filter functionality design, login page design
+- New premieres are available
+- Most features in our website saves the updates and changes by user automatically
 
 ## FAQ
 **How can I reset my password?**  
